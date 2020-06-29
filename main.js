@@ -29,48 +29,131 @@ const students = [
   'Wilson',
 ];
 
+const printRoster= function (array){
 
+  for(let i=0; i < array.length;i++)
+
+  console.log(array[i])
+
+}
+
+printRoster(students)
 // Challenge 2
 // Loop through the following array BACKWARDS, console.logging out each value. 64 should be first and 100 last.
 const grades = [100, 80, 110, 75, 83, 64];
+const printGradesBackwards = function(array){
 
+  for(let i =array.length-1 ;i >0;i--)
 
+  console.log(array[i])
+}
+printGradesBackwards(grades)
 // Challenge 3
 // Console.log out only the even numbers in the following array.
 const positiveNumbers = [5, 2, 13, 17, 4, 102, 3000];
+const printPositiveEvenNumbers=function(array){
 
+  for(let i=0;i< array.length;i++){
 
+    if(array[i] % 2 === 0){
+      console.log(array[i])
+    }
+  }
+}
+printPositiveEvenNumbers(positiveNumbers)
 // Challenge 4
 // Console.log out the even numbers in the following array, INCLUDING the negative ones. There should be four of them!
 const mixedSignNumbers = [3, 15, 14, -2, -3, -8, -103, 4];
+const printPositiveEvenMixedNumbers= function(array){
+for(let i=0;i< array.length;i++){
 
-
+  if(array[i] % 2 === 0){
+    console.log(array[i])
+  }
+}
+}
+printPositiveEvenMixedNumbers(mixedSignNumbers) 
 // Challenge 5
 // Remove two values from the beginning and one value from the end of the following array, simply by deleting them in the following line. Then console.log out each value individually.
 const symmetricalCapitals = ['A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y'];
+const removeFirst2AndLastOne=function(array){
+let newArray=[]
+newArray=  array.splice(2,array.length-3)
+for(let i=0; i < newArray.length;i++)
 
+  console.log(newArray[i])
+
+}
+
+removeFirst2AndLastOne(symmetricalCapitals)
 
 // Challenge 6
 // Add a value (your choice!) to the start of the following array and two values (of your choice) to the end simply by adding them in the following line, and then console.log out each value individually.
 const fibonacciNumbers = [1, 1, 2, 3, 5, 8, 13];
+const printNumbers= function(array){
 
+  array.unshift(0,1)
+  array.push(5,7)
+for(let i=0; i < array.length;i++)
 
+  console.log(array[i])
+}
+
+printNumbers(fibonacciNumbers)
 // Challenge 7
 // Make a NEW array with 5 values of your choice, using the same syntax as the arrays from the previous 6 challenges, that is, every value should be placed within the square brackets.  Now console.log out each value individually.
 
+const MarcsArray=[3,8,24,48,72]
+const printMyArray = function(array){
+for(let i=0; i < array.length;i++)
 
+  console.log(array[i])
+}
+
+printMyArray(MarcsArray)
 // Challenge 8
 // Make a new EMPTY array and fill it with five values of your choice using BOTH .push AND .unshift, and then console.log out each value individually.
 
+const emptyArray =[]
 
+fillArrayWithNumbers= function(array){
+
+  array.unshift(0,1,2)
+  array.push(3,4)
+
+  for(let i=0; i < array.length;i++)
+
+  console.log(array[i])
+}
+
+fillArrayWithNumbers(emptyArray)
 // Challenge 9
 // Loop through the `students` array from Challenge 1, starting at index 3 and ending at index 10 (INCLUSIVE), logging out each value individually.
+const studentsAtIndex3AndOn= function(array){
 
+  for(let i=2; i < array.length;i++)
+
+  console.log(array[i])
+}
+
+studentsAtIndex3AndOn(students)
 
 // Challenge 10
 // Loop through the `students` array from Challenge 1, making a COPY of the array, starting at index 3 and ending at index 10 (INCLUSIVE), then log out each value of the copy indivudally.
 
+const studentsAt3AndOn=function(array){
 
+  let newArray=[]
+
+  for(let i=2;i<array.length;i++){
+    newArray.push[array[i]]
+  }
+
+  for(let i=2; i < newArray.length;i++){
+    console.log(newArray[i])
+  }
+}
+studentsAt3AndOn(students)
 // Challenge 11
 // Make a COPY of the `students` array *using .slice*, starting at index 3 and ending at index 10 (INCLUSIVE), then log out each value of the copy individually. THEN log out each value of the original array. Notice that the two arrays are the same, because `slice` does NOT modify the original array.
 
